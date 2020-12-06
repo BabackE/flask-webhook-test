@@ -18,6 +18,6 @@ def hello_world():
     if request.method == 'GET':
         return html
 
-    if request.meth == 'POST':
+    if request.method == 'POST':
         print (request.get_json())
         return html
