@@ -13,6 +13,6 @@ html = '''
 </HTML>
 '''
 
-@app.route('/')
+@app.route('/', methods = ['POST'])
 def hello_world():
     return html
