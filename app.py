@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 app = Flask(__name__)
 
 html = '''
@@ -13,6 +13,11 @@ html = '''
 </HTML>
 '''
 
-@app.route('/', methods = ['POST'])
+@app.route('/', methods = ['POST', 'GET'])
 def hello_world():
-    return html
+    if request.method == 'GET':
+        return html
+
+    if request.meth == 'POST':
+        print (request.get_json())
+        return html
